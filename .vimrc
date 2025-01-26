@@ -43,3 +43,20 @@ set showtabline=2
 
 imap ;l <Esc>:Lex<CR>
 nmap ;l <Esc>:Lex<CR>
+let g:netrw_winsize = 20
+
+imap ,. <Esc>:tabn<CR>
+nmap ,. :tabn<CR>
+imap ., <Esc>:tabp<CR>
+nmap ., :tabp<CR>
+
+highlight LineNr ctermfg=lightblue
+autocmd BufRead,BufNewFile * syn match parens /[(){}]/ | hi parens ctermfg=green
+
+hi Error ctermbg=NONE ctermfg=131 guibg=NONE guifg=#af5f5f cterm=reverse gui=reverse
+hi CursorLine ctermbg=236 ctermfg=NONE guibg=#303030 guifg=NONE cterm=NONE gui=NONE
+hi String ctermfg=LightCyan
+
+nnoremap ,o :tabedit 
+:set termwinsize=12x0
+nnoremap ][ :term<CR>
